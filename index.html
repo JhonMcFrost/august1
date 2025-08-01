@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greetings Card</title>
+    <!-- Google Font-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <div class="outside">
+        <div class="front">
+          <p>Happy Girlfriend's Day</p>
+          <div class="cake">
+            <div class="top-layer"></div>
+            <div class="middle-layer"></div>
+            <div class="bottom-layer"></div>
+            <div class="candle"></div>
+          </div>
+        </div>
+        <div class="back"></div>
+      </div>
+      <div class="inside">
+        <p>Wishing you a good day filled with love</p>
+        <h1>&#127873;</h1>
+        <button id="showMessageBtn">Show More</button>
+      </div>
+    </div>
+    <div class="extended-message" id="extendedMessage" style="display: none;">
+      <h2>To My Love</h2>
+      <div class="message-content">
+        <p>
+          Di na siguro to surprise, but it's okay, gusto ko lang batiin ka na happy girlfriend day sayo mahal ko, hindi ko maipaliwanag sa salita lamang kung gaano ka kahalaga sa akin.
+        </p>
+        <p>
+          Walang araw na hindi ka sumagi sa isip ko, walang araw na hindi kita namimiss at palaging inaasam asam na nasa tabi ko.
+        </p>
+        <p>
+          Sa tuwing tinitingnan kita, hindi lang kita nakikita bilang taong mahal ko kundi bilang tahanan ng puso ko. Sayo ko palagi hinahanap hanap yung comfort, yung peace, na lagi kitang makasama.
+        </p>
+        <p>
+          Dahil din sayo, gusto ko maging mas mabuting tao, hindi dahil kailangan, kundi dahil deserve mo yon.
+        </p>
+        <p>
+          Sa espesyal na araw na to, gusto ko lang sabihin na pipiliin pa rin kita ngayon, bukas, at sa mga susunod pang araw. Kahit saan pa man tayo dalhin ng buhay, lagi akong magpapasalamat na ikaw ang kasama ko.
+        </p>
+      </div>
+    </div>
+    <script>
+      document.getElementById('showMessageBtn').onclick = function() {
+        const card = document.querySelector('.card');
+        const button = this;
+        const extendedMessage = document.getElementById('extendedMessage');
+        
+        // Add fade-out animation to card and button
+        card.classList.add('fade-out');
+        button.classList.add('fade-out');
+        
+        // Show extended message with animation
+        setTimeout(() => {
+          extendedMessage.style.display = 'block';
+          // Trigger the show animation
+          setTimeout(() => {
+            extendedMessage.classList.add('show');
+          }, 50);
+        }, 300);
+      };
+    </script>
+  </body>
+</html>
